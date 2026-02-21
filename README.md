@@ -1,12 +1,12 @@
 # claude-codebase-memory
 
-A template for Claude Code to accumulate codebase knowledge per topic across sessions.
+A template for Claude Code to accumulate codebase knowledge per domain across sessions.
 
 ## What This Does
 
 - **`/document`** slash command — run after a work session to capture what you learned
 - **`memory/INDEX.md`** — index of all documented systems, loaded at session start
-- **Topic files** (`memory/*.md`) — one file per system/domain, selectively loaded when relevant
+- **Domain files** (`memory/*.md`) — one file per system/domain, selectively loaded when relevant
 
 ## Setup
 
@@ -28,7 +28,7 @@ If your project already has a `CLAUDE.md`, append the contents from this templat
 
 1. Work on your project as usual with Claude Code
 2. When done, run `/document`
-3. Claude reviews what it touched and writes/updates topic files in `memory/`
+3. Claude reviews what it touched and writes/updates domain files in `memory/`
 4. Next session, Claude reads `INDEX.md` and loads only what's relevant
 
 ## File Structure
@@ -41,7 +41,7 @@ memory/
 └── auth.md           # Example: auth system docs
 ```
 
-Each topic file follows a consistent structure: Overview, Key Classes, Patterns, and Gotchas.
+Each domain file follows a consistent structure: Overview, Key Classes, Patterns, and Gotchas.
 
 ## License
 
